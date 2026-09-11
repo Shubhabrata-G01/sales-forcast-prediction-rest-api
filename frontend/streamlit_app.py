@@ -4,7 +4,7 @@ import os
 
 import pandas as pd  # type: ignore[import-not-found]
 import requests
-import streamlit as st
+import streamlit as st  # type: ignore[import-not-found]
 
 BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:7860")
 PREDICT_URL = f"{BACKEND_URL}/v1/predict"
