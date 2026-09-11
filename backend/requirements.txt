@@ -10,3 +10,4 @@ requests==2.28.1
 uvicorn[standard]
 streamlit==1.43.2
 fastapi
+python-multipart
