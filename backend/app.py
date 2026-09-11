@@ -2,13 +2,18 @@
 
 import io
 
-import joblib
-import pandas as pd
-from fastapi import FastAPI, File, HTTPException, UploadFile
-from pydantic import BaseModel
+from importlib import import_module
+fastapi = import_module("fastapi")
+FastAPI = fastapi.FastAPI
+File = fastapi.File
+HTTPException = fastapi.HTTPException
+UploadFile = fastapi.UploadFile
+pydantic = import_module("pydantic")
+BaseModel = pydantic.BaseModel
 
 MODEL_PATH = "superkart_model.joblib"
-model = joblib.load(MODEL_PATH)
+pd = import_module("pandas")
+model = import_module("joblib").load(MODEL_PATH)
 
 REQUIRED_COLUMNS = [
     "Product_Weight",
