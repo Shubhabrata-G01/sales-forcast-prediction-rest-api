@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 import streamlit as st
 
-BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:7860")
 PREDICT_URL = f"{BACKEND_URL}/v1/predict"
 PREDICT_BATCH_URL = f"{BACKEND_URL}/v1/predictbatch"
 
